@@ -1,0 +1,10 @@
+{
+  "name": "Remix Remix Remix Rana Gamal | Portfolio",
+  "description": "الموقع التعريفي والمهني لرنا جمال - طالبة حاسبات ومعلومات، بطلة جمهورية في الملاكمة، متخصصة في الذكاء الاصطناعي الطبي والتأهيل الحركي.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

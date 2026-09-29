@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  --color-coram-green: #3E6153;
+  --color-coram-light: #527D6C;
+  --color-coram-sage: #6B9A86;
+  --color-coram-ivory: #F4F2EC;
+  --color-coram-slate: #7C8380;
+  --color-coram-dark: #1A221F;
+  --color-coram-darker: #121815;
+  --color-coram-spruce: #2F3E3C;
+  --color-coram-mint: #BDDBD1;
+  --color-spruce: #2F3E3C;
+  --color-mint: #BDDBD1;
+  --color-pine: #3E6153;
+  --color-pine-light: #527D6C;
+  --color-pine-dark: #2A4339;
+}
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: 'Plus Jakarta Sans', 'Syne', sans-serif;
+    --font-arabic: 'Alexandria', sans-serif;
+
+    /* Theme colors - Dark Default */
+    --app-bg: #121815;
+    --app-text: #F4F2EC;
+    --card-bg: #161D1A;
+    --card-surface: #1A221F;
+    --spruce-chip: #2F3E3C;
+    --mint-accent: #BDDBD1;
+    --border-color: rgba(62, 97, 83, 0.35);
+    --border-card: #2F3E3C;
+    --text-muted: #7C8380;
+    --text-dimmed: rgba(244, 242, 236, 0.75);
+    --grid-line: rgba(255, 255, 255, 0.035);
+  }
+
+  :root[data-theme='light'],
+  body.theme-light {
+    --app-bg: #F6F8F7;
+    --app-text: #13221C;
+    --card-bg: #FFFFFF;
+    --card-surface: #F0F5F2;
+    --spruce-chip: #D7E5DF;
+    --mint-accent: #2C5747;
+    --border-color: rgba(62, 97, 83, 0.22);
+    --border-card: #D3DFD9;
+    --text-muted: #566E64;
+    --text-dimmed: rgba(19, 34, 28, 0.8);
+    --grid-line: rgba(47, 62, 60, 0.05);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--app-bg);
+    color: var(--app-text);
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+.font-sans-modern {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-display-modern {
+  font-family: 'Syne', 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-arabic {
+  font-family: 'Alexandria', sans-serif;
+}
+
+.font-mono-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Subtle modern grid overlay for architectural precision */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--app-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #3E6153;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BDDBD1;
+}
+
+/* Modern serene pulsing animations */
+@keyframes calm-pulse {
+  0%, 100% {
+    opacity: 0.12;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.24;
+    transform: scale(1.04);
+  }
+}
+
+.animate-calm-glow {
+  animation: calm-pulse 8s ease-in-out infinite;
+}
+
+/* Biomechanical Scanning Laser Animation for AI Physiotherapy */
+@keyframes scan-laser {
+  0% {
+    top: 0%;
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.2;
+  }
+}
+
+.animate-scan-laser {
+  animation: scan-laser 2.4s ease-in-out infinite alternate;
+}
